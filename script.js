@@ -23,8 +23,6 @@ let passed = false;
 */
 // **sua lógica a partir daqui**
 
-
-
 /*
     Seu código deve conter apenas UM console.log, e ele deve ser o abaixo.
     Não altere nada pra baixo dessa linha, senão os testes não irão funcionar.
