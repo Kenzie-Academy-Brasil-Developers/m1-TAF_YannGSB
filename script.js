@@ -22,16 +22,32 @@ let passed = false;
     ...
 */
 // **sua lógica a partir daqui**
-if (gender === "male" && height >= 1.70 && (barReps >= 6 || barSeconds >= 15) && abs >= 41 && ((runDistance >= 3000 && runTime <= 720) || (runDistance >= 5000 && runTime <=1200)) && ((swimDistance >= 100 && swimTime <=60) || (diveTime <= 30))) {
-    passed = true
+if (gender === "male" // se o genero é exatamente igual a masculino
+&& height >= 1.70 // e a altura é maior ou igual a 1.70
+&& (barReps >= 6 || barSeconds >= 15) // e o número de repetições na barra é maior ou igual a 6 OU o tempo das repetições com barra é maior ou igual a 15
+&& abs >= 41 // e o número de abdominais é igual ou maior que 41
+&& ((runDistance >= 3000 && runTime <= 720) // e a distância de corrida é maior ou igual a 3000 e o tempo de corrida é igual ou menor que 720
+|| (runDistance >= 5000 && runTime <=1200)) // ou a distância de corrida é maior ou igual a 5000 e o tempo de corrida é igual ou menos que 1200
+&& ((swimDistance >= 100 && swimTime <=60) // e a distância da natação for igual ou maior que 100 e o tempo da natação for menor ou igual a 60
+|| (diveTime <= 30))) // ou o tempo de mergulho é igual ou menor que 30
+{
+    passed = true //então a variável passed será verdadeira
 }
 
-if (gender === "female" && height >= 1.60 && (barReps >= 5 || barSeconds >= 12) && abs >= 41 && ((runDistance >= 4000 && runTime <= 900) || (runDistance >= 6000 && runTime <=1320)) && ((swimDistance >= 100 && swimTime <=60) || (diveTime <= 30))) {
-    passed = true
+else if (gender === "female" // se não, se o gênero for exatamente igual a feminino
+&& height >= 1.60 // e a altura é maior ou igual a 1.60
+&& (barReps >= 5 || barSeconds >= 12) // e o número de repetições na barra é maior ou igual a 5 OU o tempo das repetições com barra é maior ou igual a 12
+&& abs >= 41 // e o número de abdominais é igual ou maior que 41
+&& ((runDistance >= 4000 && runTime <= 900) // e a distância de corrida é maior ou igual a 4000 e o tempo de corrida é igual ou menor que 900
+|| (runDistance >= 6000 && runTime <=1320)) // ou a distância de corrida é maior ou igual a 6000 e o tempo de corrida é igual ou menos que 1320
+&& ((swimDistance >= 100 && swimTime <=60) // e a distância da natação for igual ou maior que 100 e o tempo da natação for menor ou igual a 60
+|| (diveTime <= 30)))  // ou o tempo de mergulho é igual ou menor que 30
+{
+    passed = true //então a variável passed será verdadeira
 }
 
 /*
     Seu código deve conter apenas UM console.log, e ele deve ser o abaixo.
     Não altere nada pra baixo dessa linha, senão os testes não irão funcionar.
 */
-console.log(passed);
+console.log(passed); //console exibirá o valor da variável passed
